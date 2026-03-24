@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我們組的 Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <!-- 組長任務：把標題改成你們組的名字 -->
+      <h1>🤖 第 X 組的 Chatbot</h1>
+      <p class="subtitle">W5 PR 協作練習</p>
+    </header>
+
+    <!-- 組員 A 任務：在 .message 裡加上時間戳 span -->
+    <!-- 組員 C 任務：在 header 下方加字數統計 p 元素 -->
+    <!-- 組員 D 任務：在 header 加深色模式切換按鈕 -->
+
+    <div id="chat-box">
+      <div class="message bot">
+        嗨！這是我們組用 PR 協作做出來的 Chatbot 🎉
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input id="user-input" type="text" placeholder="輸入訊息...">
+      <button onclick="sendMessage()">送出</button>
+      <!-- 組員 B 任務：在這裡加清除按鈕 -->
+    </div>
+
+    <!-- 組員 E 任務：在這裡加鍵盤快捷鍵說明 -->
+    <footer></footer>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const chatBox = document.getElementById('chat-box');
+      const text = input.value.trim();
+
+      if (!text) return;
+
+      const userDiv = document.createElement('div');
+      userDiv.className = 'message user';
+      // 組員 A 任務：在這裡加入時間戳
+      userDiv.textContent = text;
+      chatBox.appendChild(userDiv);
+
+      const botDiv = document.createElement('div');
+      botDiv.className = 'message bot';
+      botDiv.textContent = `你說了「${text}」！`;
+      chatBox.appendChild(botDiv);
+
+      input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    document.getElementById('user-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    // 組員 B 任務：在這裡加 clearChat() 函數
+    // 組員 C 任務：在這裡加字數統計更新邏輯
+    // 組員 D 任務：在這裡加深色模式切換函數
+  </script>
+
+</body>
+</html>
