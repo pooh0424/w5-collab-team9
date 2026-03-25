@@ -25,23 +25,23 @@
 - [x] 修改 `style.css` 裡 `header` 的背景顏色
 - [x] 填入所有組員姓名
 - [x] 設定 Branch Protection（Settings → Branches → Require PR + **2 approvals**）
-- [ ] Review 每個 PR，留下至少 1 條有意義的 comment
-- [ ] Merge 所有 PR（按順序：A → B，解決 conflict）
+- [X] Review 每個 PR，留下至少 1 條有意義的 comment
+- [X] Merge 所有 PR（按順序：A → B，解決 conflict）
 
 ### 組員 A（`feature/member-a` branch）
-- [ ] 在 `sendMessage()` 裡，每則訊息加上時間戳（`HH:MM` 格式）
-- [ ] 在 `style.css` 加上 `.timestamp` 樣式（小字、靠右、半透明）
-- [ ] 填寫完整 PR 描述（做了什麼 / 如何測試）
-- [ ] 收到 2 位成員 review 後回應 comment
-- [ ] Review 其他組員的 PR（至少 2 個）
+- [X] 在 `sendMessage()` 裡，每則訊息加上時間戳（`HH:MM` 格式）
+- [X] 在 `style.css` 加上 `.timestamp` 樣式（小字、靠右、半透明）
+- [X] 填寫完整 PR 描述（做了什麼 / 如何測試）
+- [X] 收到 2 位成員 review 後回應 comment
+- [X] Review 其他組員的 PR（至少 2 個）
 
 ### 組員 B（`feature/member-b` branch）
 - [x] 在 `index.html` 的 `.input-area` 加入「清除」按鈕
 - [x] 在 `<script>` 加入 `clearChat()` 函數，清空 `#chat-box`
 - [x] 在 `style.css` 加上清除按鈕的樣式（與送出按鈕顏色不同）
-- [ ] 填寫完整 PR 描述
-- [ ] 收到 2 位成員 review 後回應 comment
-- [ ] Review 其他組員的 PR（至少 2 個）
+- [X] 填寫完整 PR 描述
+- [X] 收到 2 位成員 review 後回應 comment
+- [X] Review 其他組員的 PR（至少 2 個）
 
 ---
 
