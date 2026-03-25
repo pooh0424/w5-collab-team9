@@ -100,6 +100,10 @@ header .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
 
 .input-area button:hover { opacity: 0.85; }
 
+.input-area .clear-button {
+  background: #ef5350;
+}
+
 /* ── 組員 D 任務：在這裡加 body.dark 深色模式樣式 ── */
 
 /* ── 組員 E 任務：在這裡加 footer 樣式 ── */
