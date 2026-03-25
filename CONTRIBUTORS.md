@@ -9,7 +9,7 @@
 
 | 角色 | 姓名 | 負責分支 | 任務 | 狀態 |
 |------|------|---------|------|------|
-| 組長 | 呂紹銘| `main` | 修改標題 & header 顏色、review 所有 PR | ⬜ |
+| 組長 | 呂紹銘| `main` | 修改標題 & header 顏色、review 所有 PR | ✅ |
 | 組員 A | 曹世杰 | `feature/member-a` | 新增訊息時間戳 | ⬜ |
 | 組員 B | 林楷祐 | `feature/member-b` | 新增清除對話按鈕 | ⬜ |
 
@@ -20,10 +20,10 @@
 ## 各組員任務說明
 
 ### 組長（`main` branch）
-- [ ] 把 `index.html` 裡「第 X 組」改成實際組名
-- [ ] 修改 `style.css` 裡 `header` 的背景顏色
-- [ ] 填入所有組員姓名
-- [ ] 設定 Branch Protection（Settings → Branches → Require PR + **2 approvals**）
+- [x] 把 `index.html` 裡「第 X 組」改成實際組名
+- [x] 修改 `style.css` 裡 `header` 的背景顏色
+- [x] 填入所有組員姓名
+- [x] 設定 Branch Protection（Settings → Branches → Require PR + **2 approvals**）
 - [ ] Review 每個 PR，留下至少 1 條有意義的 comment
 - [ ] Merge 所有 PR（按順序：A → B，解決 conflict）
 
