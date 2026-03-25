@@ -19,7 +19,7 @@
     <!-- 組員 D 任務：在 header 加深色模式切換按鈕 -->
 
     <div id="chat-box">
-      <div class="message bot">
+      <div class="message bot" id="init-msg">
         嗨！這是我們組用 PR 協作做出來的 Chatbot 🎉
       </div>
     </div>
@@ -70,6 +70,17 @@
     document.getElementById('user-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') sendMessage();
     });
+
+    // 為第一則 bot 訊息加上時間戳
+    (function() {
+      const initMsg = document.getElementById('init-msg');
+      const now = new Date();
+      const ts = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+      const span = document.createElement('span');
+      span.className = 'timestamp';
+      span.textContent = ts;
+      initMsg.appendChild(span);
+    })();
 
     // 組員 B 任務：在這裡加 clearChat() 函數
     // 組員 C 任務：在這裡加字數統計更新邏輯
