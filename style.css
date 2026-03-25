@@ -55,6 +55,14 @@ header .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
 }
 
 /* ── 組員 A 任務：在這裡加 .timestamp 樣式 ── */
+.timestamp {
+  display: block;
+  font-size: 11px;
+  text-align: right;
+  opacity: 0.5;
+  margin-top: 4px;
+}
+
 .message.user {
   background: #4f8ef7;
   color: white;

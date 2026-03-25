@@ -42,15 +42,25 @@
 
       if (!text) return;
 
+      const now = new Date();
+      const timestamp = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+
       const userDiv = document.createElement('div');
       userDiv.className = 'message user';
-      // 組員 A 任務：在這裡加入時間戳
       userDiv.textContent = text;
+      const userTime = document.createElement('span');
+      userTime.className = 'timestamp';
+      userTime.textContent = timestamp;
+      userDiv.appendChild(userTime);
       chatBox.appendChild(userDiv);
 
       const botDiv = document.createElement('div');
       botDiv.className = 'message bot';
       botDiv.textContent = `你說了「${text}」！`;
+      const botTime = document.createElement('span');
+      botTime.className = 'timestamp';
+      botTime.textContent = timestamp;
+      botDiv.appendChild(botTime);
       chatBox.appendChild(botDiv);
 
       input.value = '';
