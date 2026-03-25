@@ -26,8 +26,8 @@
 
     <div class="input-area">
       <input id="user-input" type="text" placeholder="輸入訊息...">
-      <button onclick="sendMessage()">送出</button>
-      <!-- 組員 B 任務：在這裡加清除按鈕 -->
+      <button type="button" onclick="sendMessage()">送出</button>
+      <button type="button" class="clear-button" onclick="clearChat()">清除對話</button>
     </div>
 
     <!-- 組員 E 任務：在這裡加鍵盤快捷鍵說明 -->
@@ -35,10 +35,12 @@
   </div>
 
   <script>
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const initialChatMarkup = chatBox.innerHTML.trim();
+
     function sendMessage() {
-      const input = document.getElementById('user-input');
-      const chatBox = document.getElementById('chat-box');
-      const text = input.value.trim();
+      const text = userInput.value.trim();
 
       if (!text) return;
 
@@ -53,15 +55,30 @@
       botDiv.textContent = `你說了「${text}」！`;
       chatBox.appendChild(botDiv);
 
-      input.value = '';
+      userInput.value = '';
       chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    document.getElementById('user-input').addEventListener('keypress', function(e) {
+    function clearChat() {
+      const hasMessages = chatBox.children.length > 1;
+      const hasDraft = userInput.value.trim() !== '';
+
+      if (!hasMessages && !hasDraft) return;
+
+      const shouldClear = window.confirm('確定要清除目前對話嗎？');
+
+      if (!shouldClear) return;
+
+      chatBox.innerHTML = initialChatMarkup;
+      userInput.value = '';
+      userInput.focus();
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    userInput.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') sendMessage();
     });
 
-    // 組員 B 任務：在這裡加 clearChat() 函數
     // 組員 C 任務：在這裡加字數統計更新邏輯
     // 組員 D 任務：在這裡加深色模式切換函數
   </script>
